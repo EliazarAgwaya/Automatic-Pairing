@@ -2,11 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn{
-    
-}
-
-.nav{
-    background-color: rgb(91, 91, 230);
-    height: 90px
-}

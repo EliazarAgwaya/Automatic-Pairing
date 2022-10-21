@@ -4,7 +4,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="nav">
+    <div className="bg-[#0284c7] h-90">
       <NavLink to="/login" exact="true">
         <button className="btn">Login</button>
       </NavLink>
