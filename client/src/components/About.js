@@ -37,7 +37,7 @@ dealing with large number <br></br>
  </div>
  
  </div>
-<div className="bg-[#0284c7] h-36"></div>
+<div className="bg-[#1D6697] h-36"></div>
  
   </>
   )
