@@ -1,3 +1,4 @@
+
 import { Routes, Route } from "react-router-dom";
 import React from "react";
 
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/" element={<Home />} />
       </Routes>
+
     </div>
   );
 }
