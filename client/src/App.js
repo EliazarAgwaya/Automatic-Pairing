@@ -1,15 +1,19 @@
-
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 
 function App() {
   return (
     <div className="App">
-      <h1 className="bg-indigo-500">
-      hi world
-      </h1>
-      </div>
-  
-        
-    
+      <Navbar/>
+      <Routes>
+        <Route exact path="/signup" element={<Signup />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/" element={<Home />} />
+      </Routes>
+    </div>
   );
 }
 
