@@ -5,7 +5,7 @@ class CreateMentors < ActiveRecord::Migration[7.0]
       t.string :email
       t.string :password_digest
       t.integer :phone
-      t.image :profile_image
+      t.string :profile_image
       t.timestamps
     end
   end
