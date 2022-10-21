@@ -13,7 +13,9 @@ const Navbar = () => {
         <button className="btn">Signup</button>
       </NavLink>
 
-      
+      <NavLink to="/about" exact="true">
+          <button className="btn">About Us</button>
+        </NavLink>
         
 
         <NavLink to="/" exact="true">
