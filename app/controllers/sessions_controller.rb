@@ -9,4 +9,10 @@ class SessionsController < ApplicationController
             render json:{error:"Incorrect username or password"}, status::unauthorized
         end
     end
+
+        # Logout the mentor
+        def destroy
+            session.delete :mentor_id
+            head :no_content
+        end
 end
