@@ -3,7 +3,7 @@ class StudentsController < ApplicationController
   #sign up new student
   def create 
     student = Student.create!(student_params)
-
+    
     render json: student, status: :created 
   end
 
