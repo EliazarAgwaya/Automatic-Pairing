@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  post '/signup', to: 'students#create'
+  post '/student_signup', to: 'students#create'
   post '/me' , to: 'students#show'
-  post '/login', to: 'student_sessions#create'
-  delete '/logout', to: 'student_sessions#destroy'
+  post '/student_login', to: 'student_sessions#create'
+  delete '/student_logout', to: 'student_sessions#destroy'
 
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
