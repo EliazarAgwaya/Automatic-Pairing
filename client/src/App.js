@@ -1,9 +1,14 @@
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+
 function App() {
   return (
-    <div className="App">
-      <h2 className="bg-red-600">Hello World!</h2>
-    </div>
+    <>
+    <Login />
+    <Signup />
+    </>
   );
 }
 
 export default App;
+ 
