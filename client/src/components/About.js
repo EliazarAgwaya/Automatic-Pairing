@@ -12,7 +12,10 @@ function About() {
     <div className="text-center w-60">
     <p >“You go through life wondering what is it all about life at the end of the day”</p>
     </div>
-    <div className="">
+    <div className="text-[#1D6697] text-[19]">
+    But what do we say?
+    </div>
+    <div className="bg-[#713f12] h-8 w-24 text-center">
     Automation
  </div>
     <img className="rounded-full object-cover h-36 w-36" src="https://trello.com/1/cards/6352455bf4c39c009967a985/attachments/635288e5c53ace0127a7f7d0/previews/635288e6c53ace0127a7f7d8/download/every.jpg" alt="about"/>
