@@ -19,7 +19,7 @@ function ContactUs() {
                                       <input type="text" id="phone" className='rounded-2xl pr-80 pl-4 pt-4 pb-4' name="phone " placeholder="Phone Number.." /><br></br>
                                       <label for="message">Message</label><br></br>
                                       <textarea id="message" className='rounded-2xl pr-80 pl-4 pt-4 pb-4' name="message" placeholder="Write something.."></textarea><br></br>
-                                      <input type="submit" className='bg-[#1D6697] text-white rounded-2xl pr-4 pl-4 pt-4 pb-8 justify-center' value="Send Message" /><br></br>
+                                      <input type="submit" className='bg-[#1D6697] text-white rounded-2xl pr-4 pl-4 pt-4 pb-4 justify-center' value="Send Message" /><br></br>
                                   </form>
                               </div>
                           </div>
