@@ -1,45 +1,34 @@
-// import { FormLabel } from '@mui/material'
 import React from 'react'
-
 function ContactUs() {
   return (
-    <>
-        <div className="navbar">
-            {/* <div className="navbarContents">
-                <h3 className="logo">AP</h3>
-            </div> */}
-            <div className="background">
-                <div style={{backgroundImage:`url('https://trello.com/1/cards/6354e878c89b2702f9492e14/attachments/6354f42f2811e7024ebd8d67/previews/6354f4302811e7024ebd8d75/download/contact.png')`}}>
-                <div className="mx-40">
-                <h1 className='text-6xl pb-8 pt-4'>Contact us </h1>
-                <h3 className='text-2xl pb-4'>Our friendly team would like to hear from you</h3>
-                <div className = 'bg-[#EDF4F9] rounded-3xl w-3/5 '>
-                <div className="p-11">
+      <>
+          <div className="navbar">
+              <div className="background">
+                  <div style={{ backgroundImage: `url('https://trello.com/1/cards/6354e878c89b2702f9492e14/attachments/6354f42f2811e7024ebd8d67/previews/6354f4302811e7024ebd8d75/download/contact.png')` }}>
+                      <div className="mx-40">
+                          <h1 className='text-6xl pb-8 pt-4'>Contact us </h1>
+                          <h3 className='text-2xl pb-4'>Our friendly team would like to hear from you</h3>
+                          <div className='bg-[#EDF4F9] rounded-3xl w-3/5 '>
+                              <div className="p-11">
+                                  <form>
+                                      <label for="fname">Full Name</label><br></br>
+                                      <input type="text" id="fname" className='rounded-2xl  pr-80 pl-4 pt-4 pb-4' name="firstname" placeholder="Full name.." /><br></br>
+                                      <label for="email">Email Address</label><br></br>
+                                      <input type="text" id="email" className='rounded-2xl pr-80 pl-4 pt-4 pb-4' name="email" placeholder="Email Address.." /><br></br>
+                                      <label for="phone">Phone Number</label><br></br>
+                                      <input type="text" id="phone" className='rounded-2xl pr-80 pl-4 pt-4 pb-4' name="phone " placeholder="Phone Number.." /><br></br>
+                                      <label for="message">Message</label><br></br>
+                                      <textarea id="message" className='rounded-2xl pr-80 pl-4 pt-4 pb-4' name="message" placeholder="Write something.."></textarea><br></br>
+                                      <input type="submit" className='bg-[#1D6697] text-white rounded-2xl pr-4 pl-4 pt-4 pb-4 justify-center' value="Send Message" />
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
 
-                    <form>
-                        <label for ="fname">Full Name</label><br></br>
-                        <input type="text" id="fname" className='rounded-2xl  pr-80 pl-4 pt-4 pb-4'  name="firstname" placeholder="Full name.."/><br></br>
-                        <label for ="email">Email Address</label><br></br>
-                        <input type="text" id="email" className='rounded-2xl pr-80 pl-4 pt-4 pb-4' name="email" placeholder="Email Address.."/><br></br>
-                        <label for ="phone">Phone Number</label><br></br>
-                        <input type="text" id="phone" className='rounded-2xl pr-80 pl-4 pt-4 pb-4' name="phone " placeholder="Phone Number.."/><br></br>
-                        <label for ="message">Message</label><br></br>
-                        <textarea id="message" className='rounded-2xl pr-80 pl-4 pt-4 pb-4' name="message" placeholder="Write something.."></textarea><br></br>
-                        <input type="submit" className='bg-[#1D6697] text-white rounded-2xl pr-4 pl-4 pt-4 pb-4 justify-center' value="Send Message"/>
-
-
-                        
-
-                    </form>
-                    </div>
-                </div>
-                </div>
-
-                </div>
-            </div>
-        </div>
+                  </div>
+              </div>
+          </div>
     </>
   )
 }
-
 export default ContactUs
