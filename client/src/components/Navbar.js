@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
 
     <div className=" bg-[#1D6697] h-20 w-full flex flex-row">
-        <h1 className="text-[44px] text-[#FFFFFF] ml-4">AP</h1>
+        <h1 className="text-[44px] text-[#FFFFFF] ml-4 f">AP</h1>
       <NavLink to="/login" exact="true">
         <button className="mt-6 ml-8">Login</button>
       </NavLink>
