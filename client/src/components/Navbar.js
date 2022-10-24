@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-
 import React from "react";
 
 const Navbar = () => {
@@ -38,6 +37,7 @@ const Navbar = () => {
       <NavLink to="/about" exact="true">
         <button className="mt-6 ml-6">About Us</button>
       </NavLink>
+      
     </div>
   );
 };
