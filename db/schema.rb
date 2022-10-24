@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2022_10_22_052520) do
   create_table "mentors", force: :cascade do |t|
     t.string "name"
@@ -31,4 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_22_052520) do
     t.datetime "updated_at", null: false
   end
 
+=======
+ActiveRecord::Schema[7.0].define(version: 0) do
+>>>>>>> 480ea67d540d7dcbc6a6b6c9a88c6871349dc5f4
 end
