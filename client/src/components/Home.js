@@ -2,6 +2,9 @@ import React from "react";
 
 function Home() {
   return (
+  <div className="home">
+    <h1>Welcome to my home page</h1>
+  </div>
     <div className="home">
       <div style={{ backgroundImage: `url('https://trello.com/1/cards/6354e86e18ab1a02e0045e46/attachments/6354f46230ae4600bc051d2b/download/d51c243be62f0e35c2498709a9ffee8a.jpg')` }}>
         <h1>jjjjj</h1>
