@@ -7,11 +7,13 @@ import Login from "./components/Login"
 import Signup from "./components/Signup"
 import Footer  from "./components/Footer";
 import ContactUs from "./components/ContactUs";
+import StudentPage from "./StudentPage";
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      <StudentPage />
+      <Navbar />
       <Home />
       <Routes>
         <Route exact path="/" element={<Home />} />
@@ -21,10 +23,8 @@ function App() {
         <Route exact path="/contact" element={<ContactUs />} />
       </Routes>
       <Footer />
-
     </div>
   );
 }
 
 export default App;
- 
