@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -11,6 +11,12 @@ import Students from "./components/Students";
 
 function App() {
   const [currentUser,setCurrentUser] = useState(null)
+  const [students, setStudents] = useState([]);
+  useEffect(() => {
+    fetch("/students")
+      .then((response) => response.json())
+      .then((students) => setStudents(students));
+  }, []);
   return (
     <div className="App">
       <Navbar />
@@ -20,7 +26,7 @@ function App() {
         <Route exact path="/Login" element={<Login setCurrentUser={setCurrentUser}/>} />
         <Route exact path="/Signup" element={<Signup />} />
         <Route exact path="/contact" element={<ContactUs />} />
-        <Route exact path="/students" element={<Students />} />
+        <Route exact path="/students" element={<Students students={students} setStudents={setStudents} />} />
       </Routes>
       {/* <Footer /> */}
     </div>
