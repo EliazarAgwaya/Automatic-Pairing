@@ -7,10 +7,10 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 #TM instances 
-mentor = Mentor.create!(name: "Justus Onyancha",email: "justusonyancha@moringaschool.com", password_digest: "cowsandgoats", phone: 0712345678, profile_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKX-50cP1ZPxOB_pW3dJe3tAQXjHC-CpOgUsexPAE&s")
+# mentor = Mentor.create!(name: "Justus Onyancha",email: "justusonyancha@moringaschool.com", password_digest: "cowsandgoats", phone: 0712345678, profile_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKX-50cP1ZPxOB_pW3dJe3tAQXjHC-CpOgUsexPAE&s")
 
 #Student instances 
-s1 = Student.create!(username: "Denis Kariuki", email: "deniskariuki@moringaschool.com", password_digest: "maizeandbeans", mentor_id: 1, profile_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKX-50cP1ZPxOB_pW3dJe3tAQXjHC-CpOgUsexPAE&s", gender: "Male")
+s1 = Student.create!(username: "Denis Kariuki", email: "deniskariuki@moringaschool.com", password: "maizeandbeans", mentor_id: 1, profile_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKX-50cP1ZPxOB_pW3dJe3tAQXjHC-CpOgUsexPAE&s", gender: "Male")
 s2 = Student.create!(username: "Eliazar Magero", email: "eliazar@moringaschool.com", password_digest: "magero", mentor_id: 1, profile_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKX-50cP1ZPxOB_pW3dJe3tAQXjHC-CpOgUsexPAE&s", gender: "Male")
 s3  = Student.create!(username: "Tabitha Wanja", email: "tabithawanja@moringaschool.com", password_digest: "goodlife", mentor_id: 1, profile_image: "https://as1.ftcdn.net/v2/jpg/01/16/24/44/1000_F_116244459_pywR1e0T3H7FPk3LTMjG6jsL3UchDpht.jpg", gender: "Female")
 s4 = Student.create!(username: "Ivy Murugi", email: "ivymurugi@moringaschool.com", password_digest: "kevo", mentor_id: 1, profile_image: "https://as1.ftcdn.net/v2/jpg/01/16/24/44/1000_F_116244459_pywR1e0T3H7FPk3LTMjG6jsL3UchDpht.jpg", gender: "Female") 

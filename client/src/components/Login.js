@@ -17,21 +17,23 @@ export default function Login({setCurrentUser}) {
   console.log(formData.user)
 
   const handleChange = (e) => {
-    if(formData.user.role==='student'){
-      setUrl('/student_login')
-    }
-    else{
-      setUrl('/login')
-    }
     setFormData({
       user: {
         ...formData.user,
         [e.target.name]: e.target.value,
       },
     });
+
+    if(e.target.value==='student'){
+      setUrl('/student_login')
+    }
+    else if(e.target.value==='mentor'){
+      setUrl('/login')
+    }
   };
 
   function authenticateUser(event){
+    console.log(url)
     event.preventDefault();
     fetch(`${url}`,{
       method:"POST",
@@ -44,7 +46,7 @@ export default function Login({setCurrentUser}) {
       if(response.ok){
           response.json().then((data) =>{
               setCurrentUser(data)
-              formData.user.role==='student'? navigate('/student_dashboard'):navigate("mentor_dashboard")
+              formData.user.role==='student'? navigate('/myprofile'):navigate("mentor_dashboard")
               alert("Logged In  successfully")
           })
       }
