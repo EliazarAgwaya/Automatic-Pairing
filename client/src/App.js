@@ -21,6 +21,7 @@ function App() {
         <Route exact path="/Login" element={<Login setCurrentUser={setCurrentUser}/>} />
         <Route exact path="/Signup" element={<Signup />} />
         <Route exact path="/contact" element={<ContactUs />} />
+        <Route exact path="/myprofile" element={<StudentPage  currentUser={currentUser}/>} />
       </Routes>
       {/* <Footer /> */}
     </div>
