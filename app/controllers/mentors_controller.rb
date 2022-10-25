@@ -14,6 +14,7 @@ class MentorsController < ApplicationController
     # create a new mentor
     def create
         mentor = Mentor.create!(mentor_params)
+        session[:mentor_id] = mentor.id
         render json: mentor, status: :created
     end
     private
