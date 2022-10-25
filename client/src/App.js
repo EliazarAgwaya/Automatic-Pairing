@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -11,6 +11,16 @@ import ContactUs from "./components/ContactUs";
 import StudentPage from "./StudentPage";
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
+  console.log(user);
   return (
     <div className="App">
       <Navbar />
