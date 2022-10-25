@@ -7,6 +7,7 @@ class StudentsController < ApplicationController
     render json: student, status: :created 
   end
 
+  #List all students
   def show 
     render json: @current_student
   end
@@ -17,7 +18,7 @@ class StudentsController < ApplicationController
 
   private 
   def student_params
-    params.permit(:username, :email, :profile_image, :password, :password_confirmation) 
+    params.permit(:username, :email, :profile_image, :password, :password_confirmation, :gender) 
   end
 
 end
