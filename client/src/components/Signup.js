@@ -1,5 +1,7 @@
+import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
+  const navigate = useNavigate()
   return (
       <figure className="h-screen flex bg-[#FFFFFF]">
         <div className="w-full max-w-md m-auto bg-[#EDF4F9] rounded-lg border border-primaryBorder shadow-default py-10 px-1">
@@ -47,7 +49,8 @@ export default function Signup() {
               /><label>Profile image:</label>
               <input
                 name="image"
-                type="image"
+                type="file"
+                accept="image/*"
                 placeholder="Profile image..."
                 alt="profile photo"
                 className={
@@ -55,7 +58,7 @@ export default function Signup() {
                 }
               />
               <div className="flex items-center mt-3">
-              <button type="button" class="inline-block px-6 py-2.5 bg-[#1D6697] text-[#FFFFFF] font-medium text-xs leading-tight  rounded shadow-md hover:bg-[#FFFFFF] hover:text-[#1D6697] focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Login</button>
+              <button type="button" class="inline-block px-6 py-2.5 bg-[#1D6697] text-[#FFFFFF] font-medium text-xs leading-tight  rounded shadow-md hover:bg-[#FFFFFF] hover:text-[#1D6697] focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Create Account</button>
 
                 {/* <button
                   className={
@@ -72,7 +75,7 @@ export default function Signup() {
             <br></br>
             <div className="flex items-center mt-2 space-x-0.5">
               <p>Already have an account?</p>
-              <button type="button" class="inline-block px-6 py-2.5 bg-white text-[#1D6697] font-medium text-xs leading-tight  rounded shadow-md hover:bg-[#1D6697] hover:text-white focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Login</button>
+              <button type="button" onClick={()=>navigate('/login')} class="inline-block px-6 py-2.5 bg-white text-[#1D6697] font-medium text-xs leading-tight  rounded shadow-md hover:bg-[#1D6697] hover:text-white focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Login</button>
             </div>
           </div>
         </div>
