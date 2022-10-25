@@ -6,9 +6,8 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
-import StudentPage from "./StudentPage";
+import Students from "./components/Students";
 
 function App() {
   const [currentUser,setCurrentUser] = useState(null)
@@ -21,6 +20,7 @@ function App() {
         <Route exact path="/Login" element={<Login setCurrentUser={setCurrentUser}/>} />
         <Route exact path="/Signup" element={<Signup />} />
         <Route exact path="/contact" element={<ContactUs />} />
+        <Route exact path="/students" element={<Students />} />
       </Routes>
       {/* <Footer /> */}
     </div>
