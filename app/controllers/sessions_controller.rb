@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
      # Log in an existing user
+  skip_before_action :authorize, only: :create 
+
      def create
         mentor  = Mentor.find_by(email: params[:username])
         # if user exists and has correct password
