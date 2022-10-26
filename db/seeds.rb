@@ -7,7 +7,14 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 #TM instances 
-# mentor = Mentor.create!(name: "Justus Onyancha",email: "justusonyancha@moringaschool.com", password_digest: "cowsandgoats", phone: 0712345678, profile_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKX-50cP1ZPxOB_pW3dJe3tAQXjHC-CpOgUsexPAE&s")
+Mentor.create!({
+    "name":"Justus Onyacha",
+    "password":"justus",
+    "phone":0777655675,
+    "email":"justus@gmail.com",
+    "profile_image":"https://hips.hearstapps.com/hmg-prod/images/directly-above-shot-of-cappuccino-served-on-table-royalty-free-image-769817517-1564602749.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*"
+
+})
 
 #Student instances 
 s1 = Student.create!(username: "Denis Kariuki", email: "deniskariuki@moringaschool.com", password: "maizeandbeans", mentor_id: 1, profile_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKX-50cP1ZPxOB_pW3dJe3tAQXjHC-CpOgUsexPAE&s", gender: "Male")
