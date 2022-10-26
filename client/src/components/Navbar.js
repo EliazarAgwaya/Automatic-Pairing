@@ -28,11 +28,6 @@ const Navbar = () => {
 
         </NavLink>
 
-        <NavLink to="/" exact="true">
-          <button className="mt-6 ml-8">Home</button>
-
-        </NavLink>
-
 
       <NavLink to="/about" exact="true">
         <button className="mt-6 ml-6">About Us</button>

@@ -1,10 +1,12 @@
 import React from "react";
 
-function StudentPage() {
+function StudentPage({currentUser}) {
+  console.log(currentUser)
   return (
     <div>
       <h1>AP</h1>
-      <h4>Welcome Sammy Kipkosgei</h4>
+      <h4>Welcome {currentUser.username}</h4>
+
       <img
         src="https://img.freepik.com/free-photo/cheerful-young-caucasian-businessman_171337-727.jpg?size=626&ext=jpg&ga=GA1.2.1858690084.1658745301&semt=sph"
         alt="Mentor"
