@@ -14,7 +14,7 @@ export default function Login({setCurrentUser}) {
   });
 
 
-  console.log(formData.user)
+  // console.log(formData.user)
 
   const handleChange = (e) => {
     setFormData({
@@ -33,7 +33,7 @@ export default function Login({setCurrentUser}) {
   };
 
   function authenticateUser(event){
-    console.log(url)
+    // console.log(url)
     event.preventDefault();
     fetch(`${url}`,{
       method:"POST",

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   post '/student_signup', to: 'students#create'
-  get '/me', to: 'students#show'
+  get '/me' , to: 'students#show'
   post '/student_login', to: 'student_sessions#create'
   delete '/student_logout', to: 'student_sessions#destroy'
 
