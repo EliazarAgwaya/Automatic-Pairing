@@ -12,30 +12,19 @@ import StudentPage from "./StudentPage";
 
 function App() {
   const [currentUser,setCurrentUser] = useState(null)
-  const navigate = useNavigate()
 
   useEffect(() => {
     // auto-login
     fetch("/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => {
-          // console.log(user)
           setCurrentUser(user)});
       }
     });
   }, []);
-  console.log(currentUser)
-
-  if (currentUser){
-    <Routes>
-      <Route element={<StudentPage currentUser={currentUser}/>}/>
-    </Routes>
-    return <StudentPage />
-  }else{
   return (
     <div className="App">
       <Navbar />
-      <Home />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
@@ -47,7 +36,6 @@ function App() {
       {/* <Footer /> */}
     </div>
   );
-}
 }
 
 export default App;
