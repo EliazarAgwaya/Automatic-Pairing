@@ -25,7 +25,7 @@ function StudentPage({currentUser}) {
                Quizes
             </NavLink>
             <NavLink to=""  className="flex items-center p-2 text-base font-normal rounded-lg ">My Profile</NavLink>
-            <NavLink  className="mt-14 flex items-center p-2 text-base font-normal rounded-lg " >LogOut</NavLink>
+            <NavLink  to="/" className="mt-14 flex items-center p-2 text-base font-normal rounded-lg " >LogOut</NavLink>
           </div>
 
         </aside>
