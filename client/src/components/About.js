@@ -1,7 +1,9 @@
 import React from "react";
+import Navbar from "./Navbar";
 function About() {
   return (
     <>
+    <Navbar />
   <div className="flex flex-row">
   <div className="ml-40">
     <div className="mt-2">
