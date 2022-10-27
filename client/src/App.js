@@ -9,6 +9,7 @@ import Signup from "./components/Signup";
 import ContactUs from "./components/ContactUs";
 import Students from "./components/Students";
 import StudentPage from "./StudentPage";
+import Welcomepage from "./components/Welcomepage";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -31,6 +32,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <Welcomepage />
       <StudentPage />
       <Routes>
         <Route exact path="/" element={<Home />} />
