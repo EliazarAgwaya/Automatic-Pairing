@@ -1,6 +1,9 @@
 import React from "react";
+import Navbar from "./Navbar";
 function Home() {
   return (
+    <>
+    <Navbar />
     <div className="home">
       {/* <div className="w-full" style={{ backgroundImage: `url('https://trello.com/1/cards/6354e86e18ab1a02e0045e46/attachments/6354f463c9746200bd5a1544/download/pairjpg')`, }} >
         <h1 className="text-center pt-8 text-4xl">Automatic student pairing</h1>
@@ -37,7 +40,9 @@ function Home() {
         </div>
       </footer>
     </div>
+    </>
   );
+  
 }
 
 export default Home;

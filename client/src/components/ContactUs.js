@@ -1,7 +1,9 @@
 import React from 'react'
+import Navbar from './Navbar'
 function ContactUs() {
   return (
       <>
+      <Navbar />
           <div className="contact">
               <div className="background">
                   <div style={{ backgroundImage: `url('https://trello.com/1/cards/6354e878c89b2702f9492e14/attachments/6354f42f2811e7024ebd8d67/previews/6354f4302811e7024ebd8d75/download/contact.png')` }}>

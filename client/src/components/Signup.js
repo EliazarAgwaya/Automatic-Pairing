@@ -1,9 +1,9 @@
 import React,{useState} from "react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 
 export default function Signup({setCurrentUser}) {
   const navigate = useNavigate()
-
   const[formData, setFormData] = useState({
     username:"",
     email:"",
@@ -43,7 +43,10 @@ export default function Signup({setCurrentUser}) {
   }
 
   return (
+    <>
+    <Navbar />
       <figure className="h-screen flex bg-[#FFFFFF]">
+
         <div className="w-full max-w-md m-auto bg-[#EDF4F9] rounded-lg border border-primaryBorder shadow-default py-10 px-1">
           <div className="text-primary m-6">
             <div className="flex items-center mt-3 justify-center">
@@ -136,6 +139,7 @@ export default function Signup({setCurrentUser}) {
           </div>
         </div>
       </figure>
+      </>
       
   );
 }
