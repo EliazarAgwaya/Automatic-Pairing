@@ -7,7 +7,7 @@ function ContactUs() {
           <div className="contact">
               <div className="background">
                   <div style={{ backgroundImage: `url('https://trello.com/1/cards/6354e878c89b2702f9492e14/attachments/6354f42f2811e7024ebd8d67/previews/6354f4302811e7024ebd8d75/download/contact.png')` }}>
-                      <div className="mx-40">
+                      <div className="ml-40">
                           <h1 className='text-6xl pb-8 pt-4'>Contact us </h1>
                           <h3 className='text-2xl pb-4'>Our friendly team would like to hear from you</h3>
                           <div className='bg-[#EDF4F9] rounded-3xl w-3/5 '>
