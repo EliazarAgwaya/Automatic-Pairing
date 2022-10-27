@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 function StudentPage({ currentUser }) {
   // console.log(currentUser)
   return (
-    <div>
+    <div className="relative">
       <div className=" bg-[#F5F5F5] flex justify-between border-b-2 border-[#000000] items-center h-20  ">
         <div
           className="relative w-0 h-0 
@@ -20,7 +20,7 @@ function StudentPage({ currentUser }) {
         <div className="w-1/3 text-center font-bold">
           Welcome Sammy Kipkosgei
         </div>
-        <div className="flex items-center w-1/3 justify-end">
+        <div className="flex items-center w-1/3 justify-end pr-8">
           <img
             className="rounded-full h-10 mr-5"
             src="https://hips.hearstapps.com/hmg-prod/images/directly-above-shot-of-cappuccino-served-on-table-royalty-free-image-769817517-1564602749.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*"
@@ -37,16 +37,17 @@ function StudentPage({ currentUser }) {
           <div className="bg-[#1D6697] text-white min-h-screen mb-2">
             <NavLink
               to=""
-              className="flex items-center p-2 text-base font-normal rounded-lg "
+              className="text-white flex items-center p-2 text-base font-normal rounded-lg "
             >
-              Quizes
+              My Profile
             </NavLink>
             <NavLink
               to=""
               className="flex items-center p-2 text-base font-normal rounded-lg "
             >
-              My Profile
+              Quizes
             </NavLink>
+
             <NavLink
               to="/"
               className="mt-14 flex items-center p-2 text-base font-normal rounded-lg "
@@ -79,7 +80,7 @@ function StudentPage({ currentUser }) {
             </h2>
           </div>
 
-          <div className=" w-2/3 h-2/5 p-4 text-center m-auto shadow ">
+          <div className=" w-2/3 h-1/3 p-4 text-center m-auto shadow ">
             <h2>
               {" "}
               Your Technical Mentor is{" "}
@@ -94,7 +95,7 @@ function StudentPage({ currentUser }) {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer />
       <img
         src="https://img.freepik.com/free-photo/cheerful-young-caucasian-businessman_171337-727.jpg?size=626&ext=jpg&ga=GA1.2.1858690084.1658745301&semt=sph"
         alt="Mentor"
@@ -123,7 +124,26 @@ function StudentPage({ currentUser }) {
       <p>Copyright: Automatic Pairing</p>
       <h5>Get in touch</h5>
       <p>Email Us</p>
-      <p>02-0000-1000</p>
+      <p>02-0000-1000</p> */}
+      <footer className="absolute -bottom-16 text-black ml-52 mb-20">
+        <div className="flex">
+          <div className="pr-96 pl-4 pt-8">
+            <h3>Feel free to reach us out!</h3>
+          </div>
+          <div className="pr-96 pt-8">
+            <h3>Visit us Today!</h3>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <h3>Copyright: AutomaticPairing</h3>
+          </div>
+          <div className="pt-8">
+            <h3>Get in touch</h3>
+            <h3>Email</h3>
+            <h4>02-200-000</h4>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
