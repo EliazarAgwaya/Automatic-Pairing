@@ -34,7 +34,7 @@ function App() {
       <StudentPage />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/about" element={<About />} />
+        {/* <Route exact path="/about" element={<About />} /> */}
         <Route
           exact
           path="/Login"
@@ -45,7 +45,7 @@ function App() {
           path="/Signup"
           element={<Signup setCurrentUser={setCurrentUser} />}
         />
-        <Route exact path="/contact" element={<ContactUs />} />
+        {/* <Route exact path="/contact" element={<ContactUs />} /> */}
 
         <Route
           exact
