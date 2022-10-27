@@ -8,6 +8,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import ContactUs from "./components/ContactUs";
 import Students from "./components/Students";
+import StudentPage from "./StudentPage"
 
 function App() {
   const [currentUser,setCurrentUser] = useState(null)
