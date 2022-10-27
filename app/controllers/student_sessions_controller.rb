@@ -2,9 +2,9 @@ class StudentSessionsController < ApplicationController
   skip_before_action :authorize, only: :create
 
   def create 
-    student = Student.find_by(email: params[:email])
+    student = Student.find_by(email: params[:username])
     if student&.authenticate(params[:password]) 
-      session[:user_id] = student.id 
+      session[:student_id] = student.id 
       render json: student, status: :created 
     else 
       render json: {errors: ["Invalid username or password"]}, status: :unauthorized 
@@ -12,7 +12,7 @@ class StudentSessionsController < ApplicationController
   end
 
   def destroy
-    session.delete :user_id 
+    session.delete :student_id 
     head :no_content 
   end
 end

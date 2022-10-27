@@ -1,5 +1,4 @@
 import React from "react";
-
 function About() {
   return (
     <>
@@ -12,15 +11,19 @@ function About() {
     <div className="text-center w-60">
     <p >“You go through life wondering what is it all about life at the end of the day”</p>
     </div>
+    <div className="flex flex-row">
+    
+    <img className="rounded-full object-cover h-36 w-36" src="https://trello.com/1/cards/6352455bf4c39c009967a985/attachments/635288e5c53ace0127a7f7d0/previews/635288e6c53ace0127a7f7d8/download/every.jpg" alt="about"/>
+    <div className="ml-8 mt-4">
     <div className="text-[#1D6697] text-[19]">
     But what do we say?
     </div>
     <div className="bg-[#713f12] h-8 w-24 text-center">
     Automation
  </div>
-    <img className="rounded-full object-cover h-36 w-36" src="https://trello.com/1/cards/6352455bf4c39c009967a985/attachments/635288e5c53ace0127a7f7d0/previews/635288e6c53ace0127a7f7d8/download/every.jpg" alt="about"/>
+ </div>
     </div>
-    
+    </div>
     
     <div className="bg-[#e5e5e5] w-80  text-center ml-80 mt-4 mb-4 ">
     <p >We provide a  solution to the pairing  problem. For 
@@ -40,8 +43,26 @@ dealing with large number <br></br>
  </div>
  
  </div>
-<div className="bg-[#1D6697] h-36"></div>
- 
+{/* <div className="bg-[#1D6697] h-36"></div> */}
+<footer className="bg-[#1D6697] h-36 text-white">
+          <div className="flex">
+            <div className="pr-96 pl-4 pt-8">
+              <h3>Feel free to reach us out!</h3>
+            </div>
+            <div className="pr-96 pt-8">
+              <h3>Visit us Today!</h3>
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <h3>Copyright: AutomaticPairing</h3>
+            </div>
+            <div className="pt-8">
+              <h3>Get in touch</h3>
+              <h3>Email</h3>
+              <h4>02-200-000</h4>
+            </div>
+          </div>
+        </footer>
   </>
   )
 }

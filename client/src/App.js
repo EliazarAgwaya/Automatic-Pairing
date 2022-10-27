@@ -1,35 +1,46 @@
 import { Routes, Route } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import React, { useState , useEffect} from "react";
 
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
-import StudentPage from "./StudentPage";
+import Students from "./components/Students";
+import StudentPage from "./StudentPage"
 
 function App() {
-  const [user, setUser] = useState(null);
-
+  const [currentUser,setCurrentUser] = useState(null)
+  const [students, setStudents] = useState([]);
   useEffect(() => {
+    // auto-login
     fetch("/me").then((r) => {
       if (r.ok) {
-        r.json().then((user) => setUser(user));
+        r.json().then((user) => setCurrentUser(user));
       }
     });
   }, []);
-  console.log(user);
+
+  useEffect(() => {
+    fetch("/students")
+      .then((response) => response.json())
+      .then((students) => setStudents(students));
+  }, []);
+
   return (
     <div className="App">
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
-        <Route exact path="/Login" element={<Login />} />
-        <Route exact path="/Signup" element={<Signup />} />
+        <Route exact path="/Login" element={<Login setCurrentUser={setCurrentUser}/>} />
+        <Route exact path="/Signup" element={<Signup setCurrentUser={setCurrentUser}/>} />
         <Route exact path="/contact" element={<ContactUs />} />
+       
+        <Route exact path="/students" element={<Students students={students} setStudents={setStudents} />} />
+        <Route exact path="/myprofile" element={<StudentPage  currentUser={currentUser}/>} />
+
       </Routes>
       {/* <Footer /> */}
     </div>
