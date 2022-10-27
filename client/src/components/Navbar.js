@@ -14,10 +14,6 @@ const Navbar = () => {
         <button className="mt-6 ml-8">Signup</button>
       </NavLink>
 
-      <NavLink to="/Contact" exact="true">
-        <button className="mt-6 ml-6">Contact Us</button>
-      </NavLink>
-
       <NavLink to="/" exact="true">
         <button className="mt-6 ml-8">Home</button>
       </NavLink>
