@@ -1,6 +1,6 @@
 import React from "react";
 
-function StudentPage({currentUser}) {
+function StudentPage({ currentUser }) {
   // console.log(currentUser)
   return (
     <div>
@@ -18,17 +18,17 @@ function StudentPage({currentUser}) {
       <p>Logout</p>
       <h2>You belong to the conquerers group</h2>
       <h4>Tabitha Chepng'etich</h4>
-      {/* <img
+      <img
         src="https://img.freepik.com/free-photo/cheerful-young-caucasian-businessman_171337-727.jpg?size=626&ext=jpg&ga=GA1.2.1858690084.1658745301&semt=sph"
         alt="Pair"
-      /> */}
+      />
       <p>of email address tabithachepng'etich@gmail.com</p>
       <p>Is your pair for this week</p>
       <p>Your mentor is Dennis Munene </p>
-      {/* <img
+      <img
         src="https://img.freepik.com/free-photo/cheerful-young-caucasian-businessman_171337-727.jpg?size=626&ext=jpg&ga=GA1.2.1858690084.1658745301&semt=sph"
         alt="Pair"
-      /> */}
+      />
       <p>denniskariuki@gmail.com</p>
       <h6>Feel free to reach out to us!</h6>
       <h5>Visit Us Today</h5>
