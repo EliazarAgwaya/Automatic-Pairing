@@ -9,7 +9,7 @@ class ApplicationController < ActionController::API
   end
 
   def authorize 
-    @current_student = Student.find_by(id: session[:student_id]) 
+    @current_student = Student.find_by(id: session[:user_id]) 
 
     render json: { errors: ["Not authorized"] }, status: :unauthorized unless @current_student
   end
