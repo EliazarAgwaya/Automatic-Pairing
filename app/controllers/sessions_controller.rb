@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
         mentor  = Mentor.find_by(email: params[:username])
         # if user exists and has correct password
         if mentor&.authenticate(params[:password])
-            session[:mentor_id] = mentor.id
+            session[:user_id] = mentor.id
             render json: mentor
         else
             render json: { errors: ["Invalid username or password"] }, status: :unauthorized
@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
 
     # Logout the user
     def destroy
-        mentor = Mentor.find_by(id: session[:mentor_id])
+        mentor = Mentor.find_by(id: session[:user_id])
         if mentor
             session.delete :user_id
             head :no_content
