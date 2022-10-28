@@ -1,9 +1,19 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,useNavigate } from "react-router-dom";
 import Footer from "./components/Footer";
 
-function StudentPage({ currentUser }) {
+function StudentPage({ currentUser, setCurrentUser }) {
   // console.log(currentUser)
+  const navigate = useNavigate()
+
+  function logOutUser(){
+    fetch("/student_logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setCurrentUser(null);
+        navigate('/login')
+      }
+    });
+  }
   return (
     <div className="relative">
       <div className=" bg-[#F5F5F5] flex justify-between border-b-2 border-[#000000] items-center h-20  ">
@@ -23,12 +33,12 @@ function StudentPage({ currentUser }) {
         <div className="flex items-center w-1/3 justify-end pr-8">
           <img
             className="rounded-full h-10 mr-5"
-            src="https://hips.hearstapps.com/hmg-prod/images/directly-above-shot-of-cappuccino-served-on-table-royalty-free-image-769817517-1564602749.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*"
+            src={currentUser.profile_image}
             alt="Profile pic"
           />
           <div>
-            <h2 className="text-2xl">Sammy Kipkosgei</h2>
-            <p className="text-blue-900">sam@dkut.ac.ke</p>
+            <h2 className="text-2xl">{currentUser.username}</h2>
+            <p className="text-blue-900">{currentUser.email}</p>
           </div>
         </div>
       </div>
@@ -49,7 +59,7 @@ function StudentPage({ currentUser }) {
             </NavLink>
 
             <NavLink
-              to="/"
+              onClick={logOutUser}
               className="mt-14 flex items-center p-2 text-base font-normal rounded-lg "
             >
               LogOut
