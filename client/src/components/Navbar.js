@@ -6,7 +6,7 @@ const Navbar = () => {
     <div className="flex justify-between bg-[#1D6697] h-24 w-full flex flex-row">
       <h1 className="text-5xl text-[#FFFFFF] ml-4 pt-6 font-bold">AP</h1>
 
-      <div className="font-semibold text-2xl mr-24">
+      <div className="font-500 text-xl mr-24">
         <NavLink to="/" exact="true">
           <button className="text-white mt-6 ml-8">Home</button>
         </NavLink>
