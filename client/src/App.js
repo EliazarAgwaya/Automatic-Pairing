@@ -10,6 +10,7 @@ import ContactUs from "./components/ContactUs";
 import Students from "./components/Students";
 import StudentPage from "./StudentPage";
 import Welcomepage from "./components/Welcomepage";
+import Pairs from "./components/Pairs";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -34,6 +35,7 @@ function App() {
       <Navbar />
       <Welcomepage />
       <StudentPage />
+      <Pairs />
       <Routes>
         <Route exact path="/" element={<Home />} />
         {/* <Route exact path="/about" element={<About />} /> */}

@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  skip_before_action :authorize, only: :create 
+  # skip_before_action :authorize, only: :create 
   #sign up new student
   def create 
     student = Student.create!(student_params)
