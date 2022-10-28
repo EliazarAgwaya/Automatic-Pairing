@@ -1,10 +1,12 @@
 import React, {  useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-export default function Login({setCurrentUser}) {
+export default function Login({setCurrentUser, setIsMentor}) {
   const navigate = useNavigate()
   const [url,setUrl] = useState('/login')
+  
   // const [role, setRole] = useState(null)
   const [formData, setFormData] = useState({
     user: {
@@ -15,7 +17,7 @@ export default function Login({setCurrentUser}) {
   });
 
 
-  // console.log(formData.user)
+  console.log(formData.user)
 
   const handleChange = (e) => {
     setFormData({
@@ -47,8 +49,15 @@ export default function Login({setCurrentUser}) {
       if(response.ok){
           response.json().then((data) =>{
               setCurrentUser(data)
-              formData.user.role==='student'? navigate('/myprofile'):navigate("mentor_dashboard")
-              alert("Logged In  successfully")
+              if (formData.user.role==='student'){
+                navigate('/myprofile')
+                setIsMentor(false)
+              }
+              else{
+                setIsMentor(true)
+                navigate("/dashboard")
+              } 
+              
           })
       }
       else{
@@ -60,7 +69,7 @@ export default function Login({setCurrentUser}) {
 
   return (
     <><Navbar />
-      <figure className="h-screen flex bg-[#FFFFFF]">
+      <figure className="min-h-screen flex bg-[#FFFFFF] bg-cover bg-[url(')]">
         <div className="w-full max-w-md m-auto bg-[#EDF4F9] rounded-lg border border-primaryBorder shadow-default py-10 px-1">
           <div className="text-primary m-6">
             <div className="flex items-center mt-3 justify-center">
@@ -104,15 +113,6 @@ export default function Login({setCurrentUser}) {
                 </select>
               <div className="flex items-center mt-3">
               <button type="submit" class="inline-block px-6 py-2.5 bg-[#1D6697] text-[#FFFFFF] font-medium text-xs leading-tight  rounded shadow-md hover:bg-[#FFFFFF] hover:text-[#1D6697] focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Login</button>
-
-                {/* <button
-                  className={
-                    "bg-[#1D6697] hover:bg-blue-500 py-2 px-4 text-md text-white rounded border border-blue width-246 focus:outline-none focus:border-black"
-                  }
-                  value="Login"
-                >
-                  Login
-                </button> */}
               </div>
             </form>
             <br></br>
@@ -125,6 +125,7 @@ export default function Login({setCurrentUser}) {
           </div>
         </div>
       </figure>
+      <Footer />
       </>
       
   );

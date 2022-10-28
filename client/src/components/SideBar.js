@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Sidebar() {
+export default function Sidebar({handleLogout}) {
   return (
     <div className="flex">
       <div className="flex flex-col text-white h-screen p-3 bg-[#1D6697] shadow w-60">
@@ -50,14 +50,11 @@ export default function Sidebar() {
                   <span>Settings</span>
                 </a>
               </li>
-              <li className="rounded-sm">
-                <a
-                  href="#"
-                  className="flex items-center p-2 space-x-3 rounded-md"
-                >
+              <button className="rounded-sm flex items-center p-2 space-x-3 rounded-md" onClick={handleLogout}>
+               
                   <span>Logout</span>
-                </a>
-              </li>
+               
+              </button>
             </ul>
           </div>
         </div>

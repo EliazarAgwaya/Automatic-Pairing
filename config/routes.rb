@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :students, only: [:index]
-  resources :mentors, only:[:index,:show, :create]
+  resources :mentors, only:[:index,:create]
   post "/login", to: "sessions#create"
+  get '/mentor' , to: 'mentors#show'
   delete "/logout", to: "sessions#destroy"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

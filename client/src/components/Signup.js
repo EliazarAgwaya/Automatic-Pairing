@@ -1,8 +1,9 @@
 import React,{useState} from "react";
 import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-export default function Signup({setCurrentUser}) {
+export default function Signup({setCurrentUser, setIsMentor}) {
   const navigate = useNavigate()
   const[formData, setFormData] = useState({
     username:"",
@@ -31,6 +32,7 @@ export default function Signup({setCurrentUser}) {
       if(response.ok){
           response.json().then((data) =>{
               setCurrentUser(data)
+              setIsMentor(false)
               navigate('/myprofile')
               alert(" Account was created  successfully")
           })
@@ -45,9 +47,9 @@ export default function Signup({setCurrentUser}) {
   return (
     <>
     <Navbar />
-      <figure className="h-screen flex bg-[#FFFFFF]">
+      <figure className="min-h-screen flex bg-cover bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjNZTFgX8GFBqlSFcAP6RkY05JLyqncK6NMTZEZpQ-rr0g05zP2AXAhPkCkknPPUoUMqM&usqp=CAU')]">
 
-        <div className="w-full max-w-md m-auto bg-[#EDF4F9] rounded-lg border border-primaryBorder shadow-default py-10 px-1">
+        <div className="w-full max-w-md m-auto bg-[#EDF4F9]  mt-6 mb-6 rounded-lg border border-primaryBorder shadow-default py-10 px-1" >
           <div className="text-primary m-6">
             <div className="flex items-center mt-3 justify-center">
               <h1 className="text-2xl font-medium text-primary mt-4 mb-2">
@@ -139,6 +141,7 @@ export default function Signup({setCurrentUser}) {
           </div>
         </div>
       </figure>
+      <Footer />
       </>
       
   );
