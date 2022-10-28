@@ -20,7 +20,7 @@ function StudentPage({ currentUser, setCurrentUser }) {
         <div
           className="relative w-0 h-0 
    border-l-[105px] border-l-transparent
-   border-b-[85px] border-b-[#8F6107]
+   border-b-[80px] border-b-[#8F6107]
    border-r-[105px] border-r-transparent"
         >
           <div className="absolute top-8 -left-6 text-4xl w-1/3 font-bold text-white">
@@ -37,6 +37,8 @@ function StudentPage({ currentUser, setCurrentUser }) {
             alt="Profile pic"
           />
           <div>
+            <h2 className="text-2xl">Sammy Kipkosgei</h2>
+            <p className="text-[#1D6697]">sam@dkut.ac.ke</p>
             <h2 className="text-2xl">{currentUser.username}</h2>
             <p className="text-blue-900">{currentUser.email}</p>
           </div>
@@ -69,9 +71,9 @@ function StudentPage({ currentUser, setCurrentUser }) {
         <div className="min-h-screen w-full">
           <h2 className="text-center text-2xl p-11 font-bold">
             {" "}
-            You belong to <i className="text-blue-800">Conquerers group</i>
+            You belong to <i className="text-[#1D6697]">Conquerers group</i>
           </h2>
-          <div className="border-2 border-orange-500 w-2/3 h-2/5 p-4 text-center m-auto shadow bg-[#E2F3FF] rounded-lg">
+          <div className="border-2 border-[#8F6107] w-2/3 h-2/5 p-4 text-center m-auto shadow bg-[#E2F3FF] rounded-lg">
             <img
               className="rounded-full h-10 m-auto"
               src="https://hips.hearstapps.com/hmg-prod/images/directly-above-shot-of-cappuccino-served-on-table-royalty-free-image-769817517-1564602749.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*"
@@ -81,7 +83,7 @@ function StudentPage({ currentUser, setCurrentUser }) {
               <span className="font-bold  text-2xl">Tabby Chepngetich</span>{" "}
               <br />
               <br /> of email{" "}
-              <span className="text-orange-900">
+              <span className="text-[#8F6107]">
                 tabby@moringaschool.com
               </span>{" "}
               <br />
@@ -96,7 +98,7 @@ function StudentPage({ currentUser, setCurrentUser }) {
               Your Technical Mentor is{" "}
               <span className="font-bold  text-2xl">Joseph Wambua</span> <br />
               <br /> email:{" "}
-              <span className="text-orange-900">
+              <span className="text-[#8F6107]">
                 wambuajose@moringaschool.com
               </span>{" "}
               <br />
