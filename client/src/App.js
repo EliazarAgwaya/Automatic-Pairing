@@ -11,6 +11,7 @@ import ContactUs from "./components/ContactUs";
 import Students from "./components/Students";
 import StudentPage from "./StudentPage";
 import Welcomepage from "./components/Welcomepage";
+import Pairs from "./components/Pairs";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -49,7 +50,6 @@ function App() {
       .then((students) => setStudents(students));
   }, []);
 
-
   function handleLogout(){
     fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
@@ -63,7 +63,12 @@ function App() {
   if(!currentUser){
     return(
       <div className="App">
-
+  return (
+    <div className="App">
+      <Navbar />
+      <Welcomepage />
+      <StudentPage />
+      <Pairs />
       <Routes>
         <Route exact path="/" element={<Home  currentUser={currentUser}/>} />
         {/* <Route exact path="/about" element={<About />} /> */}
