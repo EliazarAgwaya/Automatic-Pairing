@@ -11,7 +11,30 @@ function Pairs() {
     .then((data) => setStudentData(data))
   }, [])
 
-  console.log(studentData)
+  //Generate random pairs 
+  //Select random element
+  function extractRandomElement(array) {
+    return array.splice(Math.floor(Math.random()*array.length),1)[0];
+  }
+
+  //Pair students randomly
+  function generatePairs(studentData) {
+    let arr = studentData.slice(0);
+    let result = [];
+    while (arr.length > 1) {
+      let i = extractRandomElement(arr);
+      let j = extractRandomElement(arr);
+    
+      while (i===j) {
+        arr.push(j);
+        j = extractRandomElement(arr);
+      }
+      result.push({ a:i, b:j });
+    } 
+    return result
+  }
+
+  console.log(generatePairs(studentData))
 
   return (
     <div >
