@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Pair from './Pair'
 import Sidebar from './SideBar'
 
 function Pairs() {
@@ -34,13 +35,18 @@ function Pairs() {
     return result
   }
 
-  console.log(generatePairs(studentData))
+  let pairs = generatePairs(studentData)
+  console.log(pairs)
+  const renderPairs = pairs.map((pair) => {
+    return <Pair pair={pair} key={pair.a.id} />
+  })
 
   return (
     <div >
       <Sidebar />
       <div className='z-10 ml-60 mb-100' >
         <h1 className='text-[#8F6107] font-bold' >Student Pairs</h1>
+        {renderPairs}
       </div>
     </div>
   )
