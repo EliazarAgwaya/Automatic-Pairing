@@ -34,7 +34,7 @@ function Home() {
           </div> */}
         </div>
 
-        <div className="flex flex-row mt-20">
+        <div className="flex flex-row mt-1">
           <div className="ml-40">
             <div className="mt-2">
               <img
@@ -81,7 +81,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="contact">
+        <div className="contact mt-20" >
           <div className="background">
             <div
               style={{
