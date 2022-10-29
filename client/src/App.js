@@ -62,13 +62,7 @@ function App() {
 
   if(!currentUser){
     return(
-      <div className="App">
-  return (
     <div className="App">
-      <Navbar />
-      <Welcomepage />
-      <StudentPage />
-      <Pairs />
       <Routes>
         <Route exact path="/" element={<Home  currentUser={currentUser}/>} />
         {/* <Route exact path="/about" element={<About />} /> */}

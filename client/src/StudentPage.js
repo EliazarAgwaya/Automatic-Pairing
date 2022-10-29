@@ -37,8 +37,6 @@ function StudentPage({ currentUser, setCurrentUser }) {
             alt="Profile pic"
           />
           <div>
-            <h2 className="text-2xl">Sammy Kipkosgei</h2>
-            <p className="text-[#1D6697]">sam@dkut.ac.ke</p>
             <h2 className="text-2xl">{currentUser.username}</h2>
             <p className="text-blue-900">{currentUser.email}</p>
           </div>

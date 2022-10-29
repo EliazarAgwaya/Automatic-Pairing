@@ -17,8 +17,8 @@ function Home() {
         <div className='bg-[#EDF4F9]  w-1/5 pl-8  ml-96 mt-44 '>
           <p>Putting students into random <br></br> pairings takes FOREVER. <br></br> Automatic pairing app is here to save you hours each week! Providing a fun, free, and easy way to create student study pairs.</p>
         </div> */}
-        <h1 className="p-8 text-4xl font-extrabold">
-          Automatic Student pairing
+        <h1 className="p-8 text-2xl font-bold text-center">
+          Automatic Student pairing of <br/> people is just a click<br/> away
         </h1>
         <div className="flex">
           <div className="p-36 text-2xl w-6/12">
