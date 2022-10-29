@@ -10,7 +10,7 @@ class MentorsController < ApplicationController
 
     # Get a technical mentor details
     def show
-        render json: Mentor.find_by(id:session[:user_id])
+        render json: Mentor.find(session[:user_id])
     end
 
     # create a new mentor

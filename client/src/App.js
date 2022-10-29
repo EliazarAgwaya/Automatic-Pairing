@@ -49,6 +49,7 @@ function App() {
       .then((response) => response.json())
       .then((students) => setStudents(students));
   }, []);
+  console.log(isMentor)
 
   function handleLogout(){
     fetch("/logout", { method: "DELETE" }).then((r) => {
@@ -64,8 +65,7 @@ function App() {
     return(
     <div className="App">
       <Routes>
-        <Route exact path="/" element={<Home  currentUser={currentUser}/>} />
-        {/* <Route exact path="/about" element={<About />} /> */}
+        <Route exact path="/" element={<Home />} />
         <Route
           exact
           path="/Login"
@@ -84,11 +84,10 @@ function App() {
     )
 
   }else{
-
-  return (
-    <div className="app">
-     {isMentor? <Welcomepage currentUser={currentUser} setCurrentUser={setCurrentUser} handleLogout={handleLogout}/> :<StudentPage currentUser={currentUser} setCurrentUser={setCurrentUser}/>}
-    </div>
+     return (
+      <div className="app">
+      {isMentor? <Welcomepage currentUser={currentUser} setCurrentUser={setCurrentUser} handleLogout={handleLogout}/> : <StudentPage currentUser={currentUser} setCurrentUser={setCurrentUser}/>}
+      </div>
   
   );
   }
