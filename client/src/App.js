@@ -12,6 +12,7 @@ import Students from "./components/Students";
 import StudentPage from "./StudentPage";
 import Welcomepage from "./components/Welcomepage";
 import Pairs from "./components/Pairs";
+import Sidebar from "./components/SideBar";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -63,17 +64,17 @@ function App() {
 
   if(!currentUser){
     return(
-    <div className="App">
+    <div className="App 5" >
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route
           exact
-          path="/Login"
+          path="/login"
           element={<Login setCurrentUser={setCurrentUser}  setIsMentor={setIsMentor}/>}
         />
         <Route
           exact
-          path="/Signup"
+          path="/signup"
           element={<Signup setCurrentUser={setCurrentUser} setIsMentor={setIsMentor} />}
           />
         {/* <Route exact path="/contact" element={<ContactUs />} /> */}
@@ -83,13 +84,24 @@ function App() {
     </div>
     )
 
-  }else{
+  }else if(isMentor){
      return (
       <div className="app">
-      {isMentor? <Welcomepage currentUser={currentUser} setCurrentUser={setCurrentUser} handleLogout={handleLogout}/> : <StudentPage currentUser={currentUser} setCurrentUser={setCurrentUser}/>}
+       
+       {/* <Pairs /> */}
+       <Routes>
+          <Route element={<Welcomepage currentUser={currentUser} setCurrentUser={setCurrentUser} handleLogout={handleLogout}/> }/>
+          <Route element={<Pairs />} exact path='/pairs'/>
+        </Routes>
       </div>
   
   );
+  }
+  else{
+    return (
+    <div className="app">
+        <StudentPage currentUser={currentUser} setCurrentUser={setCurrentUser}/>
+    </div>)
   }
 }
 
