@@ -89,15 +89,16 @@ function App() {
       <div className="app">
        
        {/* <Pairs /> */}
+       <Sidebar handleLogout={handleLogout} />
        <Routes>
-          <Route element={<Welcomepage currentUser={currentUser} setCurrentUser={setCurrentUser} handleLogout={handleLogout}/> }/>
+          <Route exact path ='/dashboard' element={<Welcomepage currentUser={currentUser} setCurrentUser={setCurrentUser} handleLogout={handleLogout}/> }/>
           <Route element={<Pairs />} exact path='/pairs'/>
         </Routes>
       </div>
   
   );
   }
-  else{
+  else if(!isMentor){
     return (
     <div className="app">
         <StudentPage currentUser={currentUser} setCurrentUser={setCurrentUser}/>
