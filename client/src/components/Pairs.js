@@ -43,7 +43,7 @@ function Pairs() {
 
   return (
     <div >
-      <Sidebar />
+      {/* <Sidebar /> */}
       <div  className=' relative bottom-80 ml-60' >
         <h1 className='text-[#8F6107] text-center text-3xl font-bold' >Student Pairs</h1>
         {renderPairs}

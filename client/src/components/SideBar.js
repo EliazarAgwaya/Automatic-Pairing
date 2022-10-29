@@ -1,9 +1,10 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Sidebar({handleLogout}) {
   return (
     <div className="flex">
-      <div className="flex flex-col text-white h-screen p-3 bg-[#1D6697] shadow w-60">
+      <div className="flex flex-col text-white min-h-screen p-3 bg-[#1D6697] shadow w-60">
         <div className="space-y-3">
           <div className="flex items-center">
             <h2 className="text-xl font-bold">Profile</h2>
@@ -19,20 +20,18 @@ export default function Sidebar({handleLogout}) {
                 </a>
               </li>
               <li className="rounded-sm">
-                <a
-                  href="/pairs"
+                <NavLink to='/pairs'
                   className="flex items-center p-2 space-x-3 rounded-md"
                 >
                   <span>Pairs</span>
-                </a>
+                </NavLink>
               </li>
               <li className="rounded-sm">
-                <a
-                  href="#"
+                <NavLink to='/history'
                   className="flex items-center p-2 space-x-3 rounded-md"
                 >
                   <span>History</span>
-                </a>
+                </NavLink>
               </li>
               <li className="rounded-sm">
                 <a
