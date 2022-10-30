@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
 import Students from "./components/Students";
 import StudentPage from "./StudentPage";
-import Welcomepage from "./components/Welcomepage";
+import WelcomePage from "./components/Welcomepage";
 import Pairs from "./components/Pairs";
 import Sidebar from "./components/SideBar";
 import Quizz from "./components/Quizz";
@@ -51,7 +51,7 @@ function App() {
       .then((response) => response.json())
       .then((students) => setStudents(students));
   }, []);
-  console.log(isMentor)
+  // console.log(students)
 
   function handleLogout(){
     fetch("/logout", { method: "DELETE" }).then((r) => {
@@ -68,6 +68,7 @@ function App() {
     <div className="App 5" >
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route element={<Students students={students} />} exact path='/studentsList'/>
         <Route
           exact
           path="/login"
@@ -87,22 +88,34 @@ function App() {
 
   }else if(isMentor){
      return (
-      <div className="app">
+      <React.Fragment>
+        <WelcomePage currentUser={currentUser} setCurrentUser={setCurrentUser} handleLogout={handleLogout}/>
+      
+      <div className="flex mb-6">
        
        {/* <Pairs /> */}
-      <Welcomepage currentUser={currentUser} setCurrentUser={setCurrentUser} handleLogout={handleLogout}/> 
+      
        <Sidebar handleLogout={handleLogout} />
        <Routes>
           <Route element={<Pairs />} exact path='/pairs'/>
+          <Route element={<Students students={students} />} exact path='/studentsList'/>
         </Routes>
+        
       </div>
+      <Footer />
+</React.Fragment>
+
   
   );
   }
   else if(!isMentor){
     return (
-    <div className="app">
+    <div className="flex">
+
         <StudentPage currentUser={currentUser} setCurrentUser={setCurrentUser}/>
+        <Routes>
+          <Route exact path="/quiz" element={<Quizz />}/>
+        </Routes>
     </div>)
   }
 }

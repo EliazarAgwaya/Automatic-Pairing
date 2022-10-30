@@ -1,10 +1,7 @@
 import React from "react";
 
-function Students({id,
-  name,
-  email,
-  image,
-gender}) {
+function Students({students}) {
+  console.log((students))
   return (
   <>
     <h1 className="text-[44px] text-[#8F6107] ml-96 mt-20">List of all the Students</h1>
@@ -16,15 +13,19 @@ gender}) {
       </div>
 
       <div className="text-[20px]  ml-60 mt-4 flex flex-row">
-        <ol>
-          <li>
-            <h5>{name}</h5>
-            <h5>{email}</h5>
-            <img className="ml-96" src={image} alt="student" />
-      <p>
-        <strong>{gender}</strong>
-      </p>
-          </li>
+        <ol >
+          {students.map((student)=>{
+            return(
+              <li>
+            <h5>{student.username}</h5>
+            <h5>{student.email}</h5>
+            <img className="ml-96" src={student.profile_image} alt="student" />
+            <p>
+              <strong>{student.gender}</strong>
+            </p>
+                </li>
+            )
+          })}
         </ol>
 
       </div>

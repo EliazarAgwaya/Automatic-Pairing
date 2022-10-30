@@ -52,7 +52,7 @@ function StudentPage({ currentUser, setCurrentUser }) {
               My Profile
             </NavLink>
             <NavLink
-              to=""
+              to="/quiz"
               className="flex items-center p-2 text-base font-normal rounded-lg "
             >
               Quizes
