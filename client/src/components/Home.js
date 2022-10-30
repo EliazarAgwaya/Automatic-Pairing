@@ -18,7 +18,8 @@ function Home() {
           <p>Putting students into random <br></br> pairings takes FOREVER. <br></br> Automatic pairing app is here to save you hours each week! Providing a fun, free, and easy way to create student study pairs.</p>
         </div> */}
         <h1 className="p-8 text-2xl font-bold text-center">
-          Automatic Student pairing of <br/> people is just a click<br/> away
+          Automatic Student pairing of <br /> people is just a click
+          <br /> away
         </h1>
         <div className="flex">
           <div className="p-36 text-2xl w-6/12">
@@ -81,7 +82,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="contact mt-20" >
+        <div className="contact mt-20">
           <div className="background">
             <div
               style={{
@@ -148,7 +149,8 @@ function Home() {
             </div>
           </div>
         </div>
-        <footer className="bg-[#1D6697] h-36 text-white">
+        <Footer />
+        {/* <footer className="bg-[#1D6697] h-36 text-white">
           <div className="flex">
             <div className="pr-96 pl-4 pt-8">
               <h3>Feel free to reach us out!</h3>
@@ -166,7 +168,7 @@ function Home() {
               <h4>02-200-000</h4>
             </div>
           </div>
-        </footer>
+        </footer> */}
       </div>
     </>
   );
