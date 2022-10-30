@@ -125,7 +125,7 @@ export default function Login({ setCurrentUser, setIsMentor }) {
               <button
                 type="button"
                 onClick={() => navigate("/signup")}
-                class="inline-block px-6 py-2.5 bg-white text-[#1D6697] font-medium text-xs leading-tight  rounded shadow-md hover:bg-[#1D6697] hover:text-white focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                class="inline-block px-6 py-2.5 bg-white border-2 border-[#1D6697] text-[#1D6697] font-medium text-xs leading-tight  rounded shadow-md hover:bg-[#1D6697] hover:text-white focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
               >
                 Sign up
               </button>
