@@ -64,8 +64,8 @@ export default function Login({ setCurrentUser, setIsMentor }) {
   return (
     <>
       <Navbar />
-      <figure className="relative min-h-screen flex bg-[#FFFFFF] bg-contain bg-[url('https://kb.vex.com/hc/article_attachments/360093295271/Collaboration.jpg')]">
-        <div className="absolute right-72 bottom-1/4 w-full max-w-lg h-124 m-auto bg-[#EDF4F9] border-8 border-[#1D6697] rounded-lg border border-primaryBorder shadow-default py-10 px-1">
+      <figure className="relative min-h-screen flex bg-[#FFFFFF] bg-cover bg-[url('https://kb.vex.com/hc/article_attachments/360093295271/Collaboration.jpg')]">
+        <div className=" w-full max-w-lg h-124 m-auto bg-[#EDF4F9] border-8 border-[#1D6697] rounded-lg border border-primaryBorder shadow-default py-10 px-1">
           <div className="text-primary m-6">
             <div className="flex items-center mt-3 justify-center">
               <h1 className="text-2xl font-medium text-primary mt-4 mb-2">
