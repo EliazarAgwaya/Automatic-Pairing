@@ -17,9 +17,8 @@ function Home() {
         <div className='bg-[#EDF4F9]  w-1/5 pl-8  ml-96 mt-44 '>
           <p>Putting students into random <br></br> pairings takes FOREVER. <br></br> Automatic pairing app is here to save you hours each week! Providing a fun, free, and easy way to create student study pairs.</p>
         </div> */}
-        <h1 className="p-8 text-2xl font-bold text-center">
-          Automatic Student pairing of <br /> people is just a click
-          <br /> away
+        <h1 className="p-8 ml-12 text-4xl font-bold text-[#1D6697]">
+          Automatic Pairing
         </h1>
         <div className="flex">
           <div className="p-36 text-2xl w-6/12">
@@ -60,15 +59,15 @@ function Home() {
                 <div className="text-[#1D6697] text-[19]">
                   But what do we say?
                 </div>
-                <div className="bg-[#713f12] h-8 w-24 text-center">
+                <div className="bg-[#713f12] h-8 w-24 text-center text-white">
                   Automation
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-[#e5e5e5] w-80  text-center ml-80 mt-4 mb-4 ">
-            <p>
+          <div className="bg-[#e5e5e5] w-72 rounded-lg border-2 border-[#1D6697]  h-96 text-center ml-80 mt-4 mb-4 ">
+            <p className="pt-10">
               We provide a solution to the pairing problem. For the teachers,
               leaders,<br></br>
               lectures and other groups who are involved in dealing with users
@@ -94,15 +93,15 @@ function Home() {
                 <h3 className="text-2xl pb-4">
                   Our friendly team would like to hear from you
                 </h3>
-                <div className="bg-[#EDF4F9] rounded-3xl w-3/5 ">
-                  <div className="p-11">
+                <div className="bg-[#EDF4F9] border-2 border-[#1D6697] rounded-3xl w-2/3 ">
+                  <div className="p-8">
                     <form>
                       <label for="fname">Full Name</label>
                       <br></br>
                       <input
                         type="text"
                         id="fname"
-                        className="rounded-2xl  pr-80 pl-4 pt-4 pb-4"
+                        className="border-b-2 border-b-[#1D6697] shadow-lg rounded-2xl w-3/4 pl-4 pt-4 pb-4"
                         name="firstname"
                         placeholder="Full name.."
                       />
@@ -112,7 +111,7 @@ function Home() {
                       <input
                         type="text"
                         id="email"
-                        className="rounded-2xl pr-80 pl-4 pt-4 pb-4"
+                        className="border-b-2 border-b-[#1D6697] shadow-lg rounded-2xl w-3/4 pl-4 pt-4 pb-4"
                         name="email"
                         placeholder="Email Address.."
                       />
@@ -122,7 +121,7 @@ function Home() {
                       <input
                         type="text"
                         id="phone"
-                        className="rounded-2xl pr-80 pl-4 pt-4 pb-4"
+                        className="border-b-2 border-b-[#1D6697] shadow-lg rounded-2xl w-3/4 pl-4 pt-4 pb-4"
                         name="phone "
                         placeholder="Phone Number.."
                       />
@@ -131,14 +130,14 @@ function Home() {
                       <br></br>
                       <textarea
                         id="message"
-                        className="rounded-2xl pr-80 pl-4 pt-4 pb-4"
+                        className="border-b-2 border-b-[#1D6697] shadow-lg rounded-2xl w-3/4 pl-4 pt-4 pb-4"
                         name="message"
                         placeholder="Write something.."
                       ></textarea>
                       <br></br>
                       <input
                         type="submit"
-                        className="bg-[#1D6697] text-white rounded-2xl pr-4 pl-4 pt-4 pb-4 justify-center"
+                        className="bg-[#1D6697] shadow-lg text-white rounded-2xl pr-4 pl-4 pt-4 pb-4 justify-center"
                         value="Send Message"
                       />
                       <br></br>
