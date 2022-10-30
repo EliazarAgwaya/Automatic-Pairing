@@ -89,9 +89,9 @@ function App() {
       <div className="app">
        
        {/* <Pairs /> */}
+      <Welcomepage currentUser={currentUser} setCurrentUser={setCurrentUser} handleLogout={handleLogout}/> 
        <Sidebar handleLogout={handleLogout} />
        <Routes>
-          <Route exact path ='/dashboard' element={<Welcomepage currentUser={currentUser} setCurrentUser={setCurrentUser} handleLogout={handleLogout}/> }/>
           <Route element={<Pairs />} exact path='/pairs'/>
         </Routes>
       </div>

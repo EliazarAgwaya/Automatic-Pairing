@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Navbar({ fixed }) {
+export default function Navbar({ fixed,currentUser }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const Menus = ["Your profile", "Edit profile", "Settings", "Logout"]
   return (
@@ -35,7 +35,7 @@ export default function Navbar({ fixed }) {
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
                   href="#pablo"
                 >
-                    <h4>Francis odhiambo</h4><br></br>
+                    <h4>{currentUser.name}</h4><br></br>
                 </a>
               </li>
             </ul>
@@ -44,7 +44,7 @@ export default function Navbar({ fixed }) {
 <div class="overflow-hidden relative w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
 <img
           className="inline-block h-10 w-10 rounded-full ring-2 ring-white"
-          src="https://lh3.googleusercontent.com/a/ALm5wu3im9opnvc7cQfEs8yH9JdmMv-E4YUdvDX6dZf2=s288-p-rw-no"
+          src={currentUser.profile_image}
           alt=""
         />
         <div className="dropdown dropdown-end">

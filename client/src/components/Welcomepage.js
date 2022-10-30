@@ -2,11 +2,11 @@ import React from 'react'
 import Welcome from './Welcome'
 import SideBar from './SideBar'
 
-function Welcomepage({handleLogout}) {
+function Welcomepage({currentUser}) {
   return (
     <div>
-        <Welcome />
-        <SideBar handleLogout={handleLogout} />
+        <Welcome currentUser={currentUser}/>
+        {/* <SideBar handleLogout={handleLogout} />? */}
     </div>
   )
 }

@@ -28,7 +28,7 @@ function StudentPage({ currentUser, setCurrentUser }) {
           </div>
         </div>
         <div className="w-1/3 text-center font-bold">
-          Welcome Sammy Kipkosgei
+          Welcome {currentUser.username}
         </div>
         <div className="flex items-center w-1/3 justify-end pr-8">
           <img
@@ -94,10 +94,10 @@ function StudentPage({ currentUser, setCurrentUser }) {
             <h2>
               {" "}
               Your Technical Mentor is{" "}
-              <span className="font-bold  text-2xl">Joseph Wambua</span> <br />
-              <br /> email:{" "}
+              <span className="font-bold  text-2xl">{currentUser.mentor.name}</span> <br />
+              <br /> email:
               <span className="text-[#8F6107]">
-                wambuajose@moringaschool.com
+                {currentUser.mentor.email}
               </span>{" "}
               <br />
               <br />
