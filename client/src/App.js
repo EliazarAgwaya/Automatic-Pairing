@@ -13,6 +13,7 @@ import StudentPage from "./StudentPage";
 import Welcomepage from "./components/Welcomepage";
 import Pairs from "./components/Pairs";
 import Sidebar from "./components/SideBar";
+import Quizz from "./components/Quizz";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -77,7 +78,7 @@ function App() {
           path="/signup"
           element={<Signup setCurrentUser={setCurrentUser} setIsMentor={setIsMentor} />}
           />
-        {/* <Route exact path="/contact" element={<ContactUs />} /> */}
+        <Route exact path="/Quizz" element={<Quizz/>} />
 
       </Routes>
     
