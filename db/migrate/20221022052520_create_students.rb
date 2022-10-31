@@ -7,7 +7,7 @@ class CreateStudents < ActiveRecord::Migration[7.0]
       t.string :profile_image
       t.integer :mentor_id
       t.string :gender
-
+      t.integer :group_id
       t.timestamps
     end
   end
