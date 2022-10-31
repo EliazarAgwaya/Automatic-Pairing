@@ -1,3 +1,105 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@media only screen and (max-width: 1830px) {
+    #triangle {
+      border-right-width: 106px;
+      border-left-width: 106px;
+    }
+  }
+  @media only screen and (max-width: 315px) {
+    #triangle {
+      border-right-width: 40px;
+      border-left-width: 40px;
+    }
+  }
+  @media only screen and (max-width: 1770px) {
+    #triangle {
+      border-right-width: 103px;
+      border-left-width: 103px;
+    }
+  }
+  @media only screen and (max-width: 1370px) {
+    #triangle {
+      border-right-width: 102px;
+      border-left-width: 102px;
+    }
+  }
+  @media only screen and (max-width: 1270px) {
+    #triangle {
+      border-right-width: 101px;
+      border-left-width: 101px;
+    }
+  }
+  @media only screen and (max-width: 1195px) {
+    #triangle {
+      border-right-width: 98px;
+      border-left-width: 98px;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    #triangle {
+      border-right-width: 95px;
+      border-left-width: 95px;
+    }
+  }
+  @media only screen and (max-width: 880px) {
+    #triangle {
+      border-right-width: 93px;
+      border-left-width: 93px;
+    }
+  }
+  @media only screen and (max-width: 780px) {
+    #triangle {
+      border-right-width: 90px;
+      border-left-width: 90px;
+    }
+  }
+  @media only screen and (max-width: 705px) {
+    #triangle {
+      border-right-width: 88px;
+      border-left-width: 88px;
+    }
+  }
+  @media only screen and (max-width: 640px) {
+    #triangle {
+      border-right-width: 85px;
+      border-left-width: 85px;
+    }
+  }
+  @media only screen and (max-width: 560px) {
+    #triangle {
+      border-right-width: 82px;
+      border-left-width: 82px;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    #triangle {
+      border-right-width: 78px;
+      border-left-width: 78px;
+    }
+  }
+  @media only screen and (max-width: 430px) {
+    #triangle {
+      border-right-width: 75px;
+      border-left-width: 75px;
+    }
+  }
+  @media only screen and (max-width: 385px) {
+    #triangle {
+      border-right-width: 70px;
+      border-left-width: 70px;
+    }
+  }
+  @media only screen and (max-width: 370px) {
+    #triangle {
+      border-right-width: 65px;
+      border-left-width: 65px;
+    }
+  }
+  @media only screen and (max-width: 365px) {
+    #triangle {
+      border-right-width: 62px;
+      border-left-width: 62px;
+    }
+  }
