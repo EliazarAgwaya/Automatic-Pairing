@@ -3,4 +3,5 @@ class Student < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :username, presence: true
   belongs_to :mentor
+  belongs_to :group
 end
