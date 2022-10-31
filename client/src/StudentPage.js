@@ -1,27 +1,28 @@
 import React from "react";
-import { NavLink,useNavigate } from "react-router-dom";
-import Footer from "./components/Footer";
+import { NavLink, useNavigate } from "react-router-dom";
+import Footer2 from "./components/Footer2";
 
 function StudentPage({ currentUser, setCurrentUser }) {
   // console.log(currentUser)
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  function logOutUser(){
+  function logOutUser() {
     fetch("/student_logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setCurrentUser(null);
-        navigate('/login')
+        navigate("/login");
       }
     });
   }
   return (
-    <div className="relative">
+    <div className="relative w-screen">
       <div className=" bg-[#F5F5F5] flex justify-between border-b-2 border-[#000000] items-center h-20  ">
         <div
+          id="triangle"
           className="relative w-0 h-0 
-   border-l-[105px] border-l-transparent
+   border-l-[106px] border-l-transparent
    border-b-[80px] border-b-[#8F6107]
-   border-r-[105px] border-r-transparent"
+   border-r-[106px] border-r-transparent"
         >
           <div className="absolute top-8 -left-6 text-4xl w-1/3 font-bold text-white">
             AP
@@ -43,7 +44,7 @@ function StudentPage({ currentUser, setCurrentUser }) {
         </div>
       </div>
       <div className="flex">
-        <aside className="w-60" aria-label="Sidebar">
+        <aside className="w-60 h-screen" aria-label="Sidebar">
           <div className="bg-[#1D6697] text-white min-h-screen mb-2">
             <NavLink
               to=""
@@ -94,7 +95,10 @@ function StudentPage({ currentUser, setCurrentUser }) {
             <h2>
               {" "}
               Your Technical Mentor is{" "}
-              <span className="font-bold  text-2xl">{currentUser.mentor.name}</span> <br />
+              <span className="font-bold  text-2xl">
+                {currentUser.mentor.name}
+              </span>{" "}
+              <br />
               <br /> email:
               <span className="text-[#8F6107]">
                 {currentUser.mentor.email}
@@ -105,7 +109,7 @@ function StudentPage({ currentUser, setCurrentUser }) {
           </div>
         </div>
       </div>
-      {/* <Footer />
+      {/*
       <img
         src="https://img.freepik.com/free-photo/cheerful-young-caucasian-businessman_171337-727.jpg?size=626&ext=jpg&ga=GA1.2.1858690084.1658745301&semt=sph"
         alt="Mentor"
@@ -135,7 +139,7 @@ function StudentPage({ currentUser, setCurrentUser }) {
       <h5>Get in touch</h5>
       <p>Email Us</p>
       <p>02-0000-1000</p> */}
-      <footer className="absolute -bottom-16 text-black ml-52 mb-20">
+      {/* <footer className="absolute -bottom-16 text-black ml-52 mb-20">
         <div className="flex">
           <div className="pr-96 pl-4 pt-8">
             <h3>Feel free to reach us out!</h3>
@@ -153,7 +157,8 @@ function StudentPage({ currentUser, setCurrentUser }) {
             <h4>02-200-000</h4>
           </div>
         </div>
-      </footer>
+      </footer> */}
+      <Footer2 />
     </div>
   );
 }
