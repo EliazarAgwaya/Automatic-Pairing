@@ -47,7 +47,7 @@ function StudentPage({ currentUser, setCurrentUser }) {
         <aside className="w-60 h-screen" aria-label="Sidebar">
           <div className="bg-[#1D6697] text-white min-h-screen mb-2">
             <NavLink
-              to=""
+              to="/myprofile"
               className="font-bold text-white flex items-center p-2 text-base rounded-lg "
             >
               My Profile

@@ -110,9 +110,8 @@ function App() {
   }
   else if(!isMentor){
     return (
-    <div className="flex">
-
-        <StudentPage currentUser={currentUser} setCurrentUser={setCurrentUser}/>
+    <div className="">
+      <StudentPage currentUser={currentUser} setCurrentUser={setCurrentUser}/>
         <Routes>
           <Route exact path="/quiz" element={<Quizz />}/>
         </Routes>
