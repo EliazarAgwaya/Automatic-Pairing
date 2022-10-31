@@ -30,7 +30,7 @@ export default function Sidebar({handleLogout}) {
                 <NavLink to='/studentsList'
                   className="flex items-center p-2 space-x-3 rounded-md"
                 >
-                  <span>History</span>
+                  <span>Students</span>
                 </NavLink>
               </li>
               <li className="rounded-sm">
