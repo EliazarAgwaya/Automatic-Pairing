@@ -29,7 +29,7 @@ function ViewPairs() {
                 <th>Gender</th>
               </tr>
               <tr>
-                <td className="px-10">{item.students[0].name}</td>
+                <td className="px-10">{item.students[0].username}</td>
                 <td className="px-10">{item.students[0].email}</td>
                 <td className="px-10">
                   <img
