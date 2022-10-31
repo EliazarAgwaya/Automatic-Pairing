@@ -81,7 +81,7 @@ const Quizz = () => {
   return (
     <>
       <div className="P-12">
-        <h1>Take a quizz to boost your score</h1>
+        <h1 className="font-bold text-2xl">Take a quizz to boost your score</h1>
       </div>
 
       <div className="bg-[#EDF4F9] text-black rounded-3xl p-5 justify-evenly w-2/4 flex mb-48 mt-16 ml-24">
@@ -90,7 +90,7 @@ const Quizz = () => {
             You have scored {score} out of {questionStore.length}
             <>
               <button
-                className="bg-[#1D6697]"
+                className=" rounded-md p-2 ml-3 text-white bg-[#1D6697]"
                 type="submit"
                 onClick={resetQuiz}
               >
@@ -110,7 +110,7 @@ const Quizz = () => {
               </div>
             </div>
 
-            <div className="w-full flex flex-col justify-between">
+            <div className="w-full flex flex-col text-white  justify-between">
               {questionStore[currentQuestion].Answers.map((answer) => (
                 <button
                   className="bg-[#1D6697] text-2xl rounded-3xl m-2.5 w-full"
