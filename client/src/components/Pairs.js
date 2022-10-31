@@ -6,6 +6,7 @@ import Pair from './Pair'
 import Sidebar from './SideBar'
 
 function Pairs() {
+  const[group, setGroups] = useState(null)
   const [studentData, setStudentData] = useState([])
   const[pairs,setPairs] = useState([])
   //fetch student data 
@@ -13,6 +14,11 @@ function Pairs() {
     fetch('/students') 
     .then((res) => res.json())
     .then((data) => setStudentData(data))
+  }, [])
+  useEffect(() => {
+    fetch('/groups') 
+    .then((res) => res.json())
+    .then((data) => setGroups(data))
   }, [])
 
   const config = {
@@ -49,6 +55,35 @@ function Pairs() {
   }
   const renderPairs = pairs.map((pair) => {
     const characterName  = uniqueNamesGenerator(config);
+    fetch('/groups',{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({name:characterName})
+    })
+    .then(r => r.json())
+    .then(data =>{
+      fetch(`/students/${pair.a.id}`,{
+        method:"PATCH",
+        headers:{
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify({group_id:data.id})
+      }).then(r => r.json())
+      .then(data => console.log(data))
+
+      fetch(`/students/${pair.b.id}`,{
+        method:"PATCH",
+        headers:{
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify({group_id:data.id})
+      })
+
+    }
+  )
+      
     return <Pair pair={pair} key={pair.a.id} handleGeneratePairs={handleGeneratePairs}  characterName={characterName}/>
   })
 
@@ -56,7 +91,7 @@ function Pairs() {
     <div >
       <Generator handleGeneratePairs={handleGeneratePairs} />
       <div >
-        <h1 className='text-[#8F6107] text-center text-3xl font-bold' >Student Pairs</h1>
+        {/* <h1 className='text-[#8F6107] text-center text-3xl font-bold' >Student Pairs</h1> */}
         {renderPairs}
       </div>
     </div>

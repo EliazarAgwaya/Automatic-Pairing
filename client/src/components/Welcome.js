@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Navbar({ fixed,currentUser }) {
+export default function Navbar({ fixed, currentUser }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-  const Menus = ["Your profile", "Edit profile", "Settings", "Logout"]
+  const Menus = ["Your profile", "Edit profile", "Settings", "Logout"];
   return (
     <>
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-[#F5F5F5] mb-3">
@@ -35,38 +35,35 @@ export default function Navbar({ fixed,currentUser }) {
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
                   href="#pablo"
                 >
-                    <h4>{currentUser.name}</h4><br></br>
+                  <h4>{currentUser.name}</h4>
+                  <br></br>
                 </a>
               </li>
             </ul>
-            
 
-<div class="overflow-hidden relative w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
-<img
-          className="inline-block h-10 w-10 rounded-full ring-2 ring-white"
-          src={currentUser.profile_image}
-          alt=""
-        />
-        <div className="dropdown dropdown-end">
-  <label tabIndex={0} className="btn m-1">Click</label>
-  <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-    <li><a>Item 1</a></li>
-    <li><a>Item 2</a></li>
-  </ul>
-</div>
-{/* <div className="bg-[#1D6697] p-4 w-52 shadow-lg absolute -left-14 top-24">
-  <ul>
-    {
-      Menus.map((menu)=> (
-        <li key={menu}>{menu}</li>
-      ))
-    }
-  </ul>
-
-</div> */}
-   
-</div>
-
+            <div class="overflow-hidden relative w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
+              <img
+                className="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+                src={currentUser.profile_image}
+                alt=""
+              />
+              <div className="dropdown dropdown-end">
+                <label tabIndex={0} className="btn m-1">
+                  Click
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+                >
+                  <li>
+                    <a>Item 1</a>
+                  </li>
+                  <li>
+                    <a>Item 2</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </nav>

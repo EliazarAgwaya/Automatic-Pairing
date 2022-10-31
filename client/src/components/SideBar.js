@@ -23,14 +23,22 @@ export default function Sidebar({handleLogout}) {
                 <NavLink to='/dashboard'
                   className="flex items-center p-2 space-x-3 rounded-md"
                 >
-                  <span>Pairs</span>
+                  <span>DashBoard</span>
+                </NavLink>
+              </li>
+              <li className="rounded-sm">
+                <NavLink
+                to='/viewpairs'
+                  className="flex items-center p-2 space-x-3 rounded-md"
+                >
+                  <span>View Pairs</span>
                 </NavLink>
               </li>
               <li className="rounded-sm">
                 <NavLink to='/studentsList'
                   className="flex items-center p-2 space-x-3 rounded-md"
                 >
-                  <span>Students</span>
+                  <span>My Students</span>
                 </NavLink>
               </li>
               <li className="rounded-sm">
@@ -41,14 +49,7 @@ export default function Sidebar({handleLogout}) {
                   <span>Quizes</span>
                 </a>
               </li>
-              <li className="rounded-sm">
-                <a
-                  href="#"
-                  className="flex items-center p-2 space-x-3 rounded-md"
-                >
-                  <span>Settings</span>
-                </a>
-              </li>
+              
               <button className="rounded-sm flex items-center p-2 space-x-3 rounded-md" onClick={handleLogout}>
                
                   <span>Logout</span>

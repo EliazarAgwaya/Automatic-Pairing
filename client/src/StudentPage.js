@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import FooterT from "./components/FooterT";
 
 function StudentPage({ currentUser, setCurrentUser }) {
+
+  const[group,setGroup] = useState()
+  const[pair,setPair] = useState()
+  const[email,setEmail] = useState()
+  const[image,setImage] = useState()
   // console.log(currentUser)
   const navigate = useNavigate();
+
+  useEffect(()=>{
+    fetch(`/groups/${currentUser.group_id}`)
+    .then(r=> r.json())
+    .then(data => {
+      setGroup(data.name)
+      const pair = data.students.filter((item)=> item.id !==currentUser.id)
+      setPair(pair[0].username)
+      setImage(pair[0].profile_image)
+      setEmail(pair[0].email)
+    })
+  },[])
+
 
   function logOutUser() {
     fetch("/student_logout", { method: "DELETE" }).then((r) => {
@@ -70,20 +88,20 @@ function StudentPage({ currentUser, setCurrentUser }) {
         <div className="min-h-screen w-full">
           <h2 className="text-center text-2xl p-11 font-bold">
             {" "}
-            You belong to <i className="text-[#1D6697]">Conquerers group</i>
+            You belong to <i className="text-[#1D6697]"> {group}</i>
           </h2>
           <div className="border-2 border-[#8F6107] w-2/3 h-2/5 p-4 text-center m-auto shadow bg-[#E2F3FF] rounded-lg">
             <img
               className="rounded-full h-10 m-auto"
-              src="https://hips.hearstapps.com/hmg-prod/images/directly-above-shot-of-cappuccino-served-on-table-royalty-free-image-769817517-1564602749.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*"
+              src={image}
               alt="Profile pic"
             />
             <h2>
-              <span className="font-bold  text-2xl">Tabby Chepngetich</span>{" "}
+              <span className="font-bold  text-2xl">{pair}</span>{" "}
               <br />
               <br /> of email{" "}
               <span className="text-[#8F6107]">
-                tabby@moringaschool.com
+               {email}
               </span>{" "}
               <br />
               <br />
