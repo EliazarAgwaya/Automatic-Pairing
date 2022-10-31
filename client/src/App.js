@@ -15,6 +15,7 @@ import Pairs from "./components/Pairs";
 import Sidebar from "./components/SideBar";
 import Quizz from "./components/Quizz";
 import Generator from "./components/Generator";
+import ViewPairs from "./components/ViewPairs";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -99,6 +100,7 @@ function App() {
        <Sidebar handleLogout={handleLogout} />
        <Routes>
           <Route element={<Pairs />} exact path='/dashboard'/>
+          <Route element={<ViewPairs />} exact path='/viewpairs'/>
           <Route element={<Students students={students} />} exact path='/studentsList'/>
         </Routes>
         

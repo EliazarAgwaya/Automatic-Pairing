@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  resources :students, only: [:index]
+  resources :students, only: [:index,:update,:show]
   resources :mentors, only:[:index,:create]
   post "/login", to: "sessions#create"
   get '/mentor' , to: 'mentors#show'
   delete "/logout", to: "sessions#destroy"
+  post "/groups", to: "groups#create"
+  resources :groups, only:[:index,:show]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
