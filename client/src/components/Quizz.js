@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Sidebar from "./SideBar";
-import Footer2 from "./Footer2";
+import FooterT from "./FooterT";
 
 const Quizz = () => {
   var questionStore = [
@@ -123,7 +123,7 @@ const Quizz = () => {
           </>
         )}
       </div>
-      <Footer2 />
+      <FooterT />
     </>
   );
 };

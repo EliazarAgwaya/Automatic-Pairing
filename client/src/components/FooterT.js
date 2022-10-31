@@ -1,6 +1,6 @@
 import React from "react";
 
-function Footer2() {
+function FooterT() {
   return (
     <div>
       <hr className="shadow-xl bg-black h-2"></hr>

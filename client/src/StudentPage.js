@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import Footer2 from "./components/Footer2";
+import FooterT from "./components/FooterT";
 
 function StudentPage({ currentUser, setCurrentUser }) {
   // console.log(currentUser)
@@ -109,7 +109,7 @@ function StudentPage({ currentUser, setCurrentUser }) {
           </div>
         </div>
       </div>
-      <Footer2 />
+      <FooterT />
     </div>
   );
 }
