@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
+import Generator from './Generator'
+import { uniqueNamesGenerator, Config, names, animals, adjectives, starWars } from 'unique-names-generator';
+
 import Pair from './Pair'
 import Sidebar from './SideBar'
 
 function Pairs() {
   const [studentData, setStudentData] = useState([])
-
+  const[pairs,setPairs] = useState([])
   //fetch student data 
   useEffect(() => {
     fetch('/students') 
@@ -12,6 +15,11 @@ function Pairs() {
     .then((data) => setStudentData(data))
   }, [])
 
+  const config = {
+    dictionaries: [starWars]
+  }
+  
+ 
   //Generate random pairs 
   //Select random element
   function extractRandomElement(array) {
@@ -35,15 +43,18 @@ function Pairs() {
     return result
   }
 
-  let pairs = generatePairs(studentData)
-  console.log(pairs)
+  function handleGeneratePairs(){
+  const pairs = generatePairs(studentData)
+    setPairs(pairs)
+  }
   const renderPairs = pairs.map((pair) => {
-    return <Pair pair={pair} key={pair.a.id} />
+    const characterName  = uniqueNamesGenerator(config);
+    return <Pair pair={pair} key={pair.a.id} handleGeneratePairs={handleGeneratePairs}  characterName={characterName}/>
   })
 
   return (
     <div >
-      {/* <Sidebar /> */}
+      <Generator handleGeneratePairs={handleGeneratePairs} />
       <div >
         <h1 className='text-[#8F6107] text-center text-3xl font-bold' >Student Pairs</h1>
         {renderPairs}

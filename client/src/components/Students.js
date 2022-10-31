@@ -3,14 +3,8 @@ import React from "react";
 function Students({students}) {
   console.log((students))
   return (
-  <div>
+  <div className="ml-10">
     <h1 className="text-[44px] text-[#8F6107]">List of all the Students</h1>
-    {/* <div className="text-[20px] text-[#1D6697] ">
-      <h2 className="ml-6">Name</h2>
-      <h2 className="ml-40">Email</h2>
-      <h2 className="ml-36">Picture</h2>
-      <h2 className="ml-60">Gender</h2>
-      </div> */}
       <table>
         <tr>
           <th>No</th>

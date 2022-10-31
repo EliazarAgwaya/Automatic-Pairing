@@ -11,16 +11,16 @@ export default function Sidebar({handleLogout}) {
           </div>
           <div className="flex-1">
             <ul className="pt-2 pb-4 space-y-1 text-sm">
-              <li className="rounded-sm">
+              {/* <li className="rounded-sm">
                 <NavLink
                 to='/dashboard'
                   className="flex items-center p-2 space-x-3 rounded-md"
                 >
                   <span>DashBoard</span>
                 </NavLink>
-              </li>
+              </li> */}
               <li className="rounded-sm">
-                <NavLink to='/pairs'
+                <NavLink to='/dashboard'
                   className="flex items-center p-2 space-x-3 rounded-md"
                 >
                   <span>Pairs</span>

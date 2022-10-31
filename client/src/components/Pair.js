@@ -1,10 +1,12 @@
 import React from 'react'
 
-function Pair({pair}) {
+function Pair({pair,characterName}) {
   const {a, b} = pair
+
+
   return (
     <div className='m-10 bg-[#EDF4F9] py-10 rounded-3xl border-2 border-solid border-blue-500 drop-shadow-xl'>
-      <h1 className='text-center text-blue-500 text-2xl font-bold mb-4'>Conquerers</h1>
+      <h1 className='text-center text-blue-500 text-2xl font-bold mb-4'>{characterName}</h1>
       <table>
         <tr>
           <th >Name</th>

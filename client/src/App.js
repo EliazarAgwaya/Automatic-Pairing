@@ -6,7 +6,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import Footer from "./components/Footer";
+import Footer2 from "./components/Footer2";
 import ContactUs from "./components/ContactUs";
 import Students from "./components/Students";
 import StudentPage from "./StudentPage";
@@ -14,6 +14,7 @@ import WelcomePage from "./components/Welcomepage";
 import Pairs from "./components/Pairs";
 import Sidebar from "./components/SideBar";
 import Quizz from "./components/Quizz";
+import Generator from "./components/Generator";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -97,12 +98,12 @@ function App() {
       
        <Sidebar handleLogout={handleLogout} />
        <Routes>
-          <Route element={<Pairs />} exact path='/pairs'/>
+          <Route element={<Pairs />} exact path='/dashboard'/>
           <Route element={<Students students={students} />} exact path='/studentsList'/>
         </Routes>
         
       </div>
-      <Footer />
+      <Footer2 />
 </React.Fragment>
 
   
