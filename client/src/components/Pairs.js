@@ -98,6 +98,7 @@ function Pairs() {
     })
     alert("Record Cleared successfully")
     setPairs([])
+    setGroups([])
   }
   return (
     <div >
