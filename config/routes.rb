@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/mentor' , to: 'mentors#show'
   delete "/logout", to: "sessions#destroy"
   post "/groups", to: "groups#create"
-  resources :groups, only:[:index,:show]
+  resources :groups, only:[:index,:show,:destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

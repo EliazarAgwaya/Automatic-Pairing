@@ -50,8 +50,13 @@ function Pairs() {
   }
 
   function handleGeneratePairs(){
-  const pairs = generatePairs(studentData)
-    setPairs(pairs)
+    if(group.length===0){
+      const pairs = generatePairs(studentData)
+        setPairs(pairs)
+    }
+    else{
+      alert("reset pairs first")
+    }
   }
   const renderPairs = pairs.map((pair) => {
     const characterName  = uniqueNamesGenerator(config);
@@ -84,12 +89,19 @@ function Pairs() {
     }
   )
       
-    return <Pair pair={pair} key={pair.a.id} handleGeneratePairs={handleGeneratePairs}  characterName={characterName}/>
+ 
+    return <Pair pair={pair} key={pair.a.id}  handleGeneratePairs={handleGeneratePairs}  characterName={characterName}/>
   })
-
+ function clearAll(){
+    fetch('/groups/1',{
+      method:"DELETE"
+    })
+    alert("Record Cleared successfully")
+    setPairs([])
+  }
   return (
     <div >
-      <Generator handleGeneratePairs={handleGeneratePairs} />
+      <Generator handleGeneratePairs={handleGeneratePairs} clearAll={clearAll} />
       <div >
         {/* <h1 className='text-[#8F6107] text-center text-3xl font-bold' >Student Pairs</h1> */}
         {renderPairs}

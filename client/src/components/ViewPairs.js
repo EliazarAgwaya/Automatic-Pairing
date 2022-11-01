@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 function ViewPairs() {
-  const [group, setGroups] = useState(null);
   const [pairs, setPairs] = useState([]);
   //fetch student data
 

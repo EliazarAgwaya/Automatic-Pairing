@@ -1,5 +1,5 @@
 import React from "react";
-export default function Generator({handleGeneratePairs}){
+export default function Generator({handleGeneratePairs,clearAll}){
     return(
         <div className="container mx-auto justify-center mt-12">
         <div className="grid grid-cols-1 gap-6 mb-6 lg:grid-cols-3">
@@ -55,7 +55,7 @@ export default function Generator({handleGeneratePairs}){
               </select>
             </div>
             <br></br>
-            <button class="bg-[#1D6697] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button class="bg-[#1D6697] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded " onClick={clearAll}>
               Reset the pairs
             </button>
           </div>
