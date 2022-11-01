@@ -6,7 +6,7 @@ function Home() {
     <>
       <Navbar />
       <div
-        className="bg-contain bg-no-repeat bg-[url('https://trello.com/1/cards/6354e86e18ab1a02e0045e46/attachments/6354f463c9746200bd5a1544/download/pairjpg')]"
+        className="relative bg-contain bg-no-repeat bg-[url('https://trello.com/1/cards/6354e86e18ab1a02e0045e46/attachments/6354f463c9746200bd5a1544/download/pairjpg')]"
         // style={{
         //   backgroundRepeat: "no-repeat",
         //   backgroundImage: `url('https://trello.com/1/cards/6354e86e18ab1a02e0045e46/attachments/6354f463c9746200bd5a1544/download/pairjpg')`,
@@ -34,7 +34,7 @@ function Home() {
           </div> */}
         </div>
 
-        <div className="flex flex-row mt-1">
+        {/* <div className="flex flex-row mt-1">
           <div className="ml-40">
             <div className="mt-2">
               <img
@@ -66,19 +66,20 @@ function Home() {
             </div>
           </div>
 
-          <div className="bg-[#e5e5e5] w-72 rounded-lg border-2 border-[#1D6697]  h-96 text-center ml-80 mt-4 mb-4 ">
-            <p className="pt-10">
-              We provide a solution to the pairing problem. For the teachers,
-              leaders,<br></br>
-              lectures and other groups who are involved in dealing with users
-              or people,<br></br>
-              this system is for you. <br></br>
-              It allows you to automatically put people into pairs and keep
-              track of the pairs at just a click of a button. <br></br>
-              This gives efficiency in dealing with large number <br></br>
-              of people.
-            </p>
-          </div>
+          
+        </div> */}
+        <div className="mt-12 absolute bottom-2/3 right-28 w-72 rounded-lg border-2 border-[#1D6697]  h-120 text-center ml-80 mb-4 ">
+          <p className="font-bold text-lg p-2 text-[#1D6697]">
+            We provide a solution to the pairing problem. For the teachers,
+            leaders,<br></br>
+            lectures and other groups who are involved in dealing with users or
+            people,<br></br>
+            this system is for you. <br></br>
+            It allows you to automatically put people into pairs and keep track
+            of the pairs at just a click of a button. <br></br>
+            This gives efficiency in dealing with large number <br></br>
+            of people.
+          </p>
         </div>
 
         <div className="contact mt-20">
