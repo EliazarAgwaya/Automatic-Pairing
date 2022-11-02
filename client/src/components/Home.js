@@ -22,11 +22,19 @@ function Home() {
         </h1>
         <div className="flex">
           <div className="p-36 text-2xl w-6/12">
-            <h2 className="text-black bg-white border-[#1D6697] border-4 p-4 w-60 font-medium rounded-lg shadow-lg text-centre">
+            <h2 className="text-black bg-white border-[#1D6697] border-4 p-4 w-4/5 font-medium rounded-lg shadow-lg text-centre">
               Putting students into random <br></br> pairings takes FOREVER.{" "}
               <br></br> Automatic pairing app is here to <br></br> save you
               hours each week! <br></br> Providing a fun, free, and easy way to{" "}
-              <br></br> create student study pairs.
+              <br></br> create student study pairs. We provide a solution to the
+              pairing problem. For the teachers, leaders,<br></br>
+              lectures and other groups who are involved in dealing with users
+              or people,<br></br>
+              this system is for you. <br></br>
+              It allows you to automatically put people into pairs and keep
+              track of the pairs at just a click of a button. <br></br>
+              This gives efficiency in dealing with large number <br></br>
+              of people.
             </h2>
           </div>
           {/* <div className="w-6/12 h-full">
@@ -68,19 +76,6 @@ function Home() {
 
           
         </div> */}
-        <div className="mt-12 absolute bottom-2/3 right-28 w-72 rounded-lg border-2 border-[#1D6697]  h-120 text-center ml-80 mb-4 ">
-          <p className="font-bold text-lg p-2 text-[#1D6697]">
-            We provide a solution to the pairing problem. For the teachers,
-            leaders,<br></br>
-            lectures and other groups who are involved in dealing with users or
-            people,<br></br>
-            this system is for you. <br></br>
-            It allows you to automatically put people into pairs and keep track
-            of the pairs at just a click of a button. <br></br>
-            This gives efficiency in dealing with large number <br></br>
-            of people.
-          </p>
-        </div>
 
         <div className="contact mt-20">
           <div className="background">
